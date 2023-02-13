@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank calculation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="capitalize text-slate-800 text-4xl font-bold text-center my-12">simple <span class="text-amber-600">bank</span> calculation</h1>
+
+    <section>
+        <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto text-white">
+            <div class="p-8 bg-orange-400 rounded-lg">
+                <h3>Total Deposit :</h3>
+                <h1 class="text-4xl font-semibold">$<span id="total-deposit">00</span></h1>
+            </div>
+            <div class="p-8 bg-blue-600 rounded-lg">
+                <h3>Total Withdraw :</h3>
+                <h1 class="text-4xl font-semibold">$<span id="total-withdraw">00</span></h1>
+            </div>
+            <div class="p-8 bg-green-700 rounded-lg">
+                <h3>Total Balance :</h3>
+                <h1 class="text-4xl font-semibold">$<span id="total-balance">1250</span></h1>
+            </div>
+        </div>
+    </section>
+    <section class="mt-12">
+        <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto text-white">
+            <div class="p-8 rounded-lg bg-rose-600">
+                <h1 class="text-2xl font-semibold">Deposit Now :</h1>
+                <input type="text" class="block my-4 rounded-md text-slate-500 font-medium py-2 px-4 outline-none border-none w-3/4" id="deposit-input">
+                <button class="py-2 px-4 rounded-md bg-amber-400 cursor-pointer font-medium" id="deposit-btn">Deposit</button>
+            </div>
+            <div class="p-8 rounded-lg bg-indigo-400">
+                <h1 class="text-2xl font-semibold">Withdraw Now :</h1>
+                <input type="text" class="block my-4 rounded-md text-slate-500 font-medium py-2 px-4 outline-none border-none w-3/4" id="withdraw-input">
+                <button class="py-2 px-4 rounded-md bg-slate-900 cursor-pointer font-medium" id="withdraw-btn">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/depsit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
