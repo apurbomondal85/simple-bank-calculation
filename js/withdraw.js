@@ -2,7 +2,8 @@
 
 const withdrawBtn = document.getElementById('withdraw-btn');
 
-withdrawBtn.addEventListener('click', ()=>{
+
+function bankCalculation(){
     const totalWithdraw = document.getElementById('total-withdraw');
     const totalBalance = document.getElementById('total-balance');
     const withdrawInput = document.getElementById('withdraw-input');
@@ -24,5 +25,20 @@ withdrawBtn.addEventListener('click', ()=>{
     }
     
     withdrawInput.value = '';
-    
+}
+
+withdrawBtn.addEventListener('click', ()=>{
+     bankCalculation();
+})
+
+document.addEventListener('keyup',(event)=>{
+    const withdrawInput = document.getElementById('withdraw-input');
+    const withdrawStringValue = parseFloat(withdrawInput.value);
+    if (withdrawStringValue) {   
+        let keyValue = event.key;
+        console.log(keyValue);
+        if (keyValue === "Enter") {
+            bankCalculation();
+        }
+    }
 })

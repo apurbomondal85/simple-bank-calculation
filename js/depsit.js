@@ -1,7 +1,8 @@
 
 const depositBtn = document.getElementById('deposit-btn');
 
-depositBtn.addEventListener('click', ()=>{
+
+function bankCalculation1() {
     const totalDeposit = document.getElementById('total-deposit');
     const totalBalance = document.getElementById('total-balance');
     const depositInput = document.getElementById('deposit-input');
@@ -19,5 +20,21 @@ depositBtn.addEventListener('click', ()=>{
     }
     
     depositInput.value = '';
-    
+}
+
+
+depositBtn.addEventListener('click', ()=>{
+    bankCalculation1();
 })
+
+document.addEventListener('keyup',(event)=>{
+    const depositInput = document.getElementById('deposit-input');
+    const depositStringValue = parseFloat(depositInput.value);
+    if (depositStringValue) {   
+        let keyValue = event.key;
+        if (keyValue === "Enter") {
+            bankCalculation1();
+        }
+    }
+})
+
